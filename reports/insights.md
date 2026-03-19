@@ -1,6 +1,6 @@
 # Spotify Analytics Insights Report
 
-##Overview
+## Overview
 
 This report presents key insights derived from the Spotify Wrapped 2025 dataset, focusing on identifying patterns and trends that influence song popularity. The analysis explores relationships between audio features, metadata, and streaming performance to answer key business questions.
 
