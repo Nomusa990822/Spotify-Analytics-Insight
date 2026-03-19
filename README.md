@@ -2,11 +2,9 @@
 
 ## Project Overview
 
-This project analyzes Spotify song data to uncover patterns behind music popularity using the Spotify Wrapped 2025 dataset.
+This project explores the key factors that drive song popularity on Spotify using real-world datasets. It analyzes how audio features such as danceability, energy, tempo (BPM), and valence influence streaming performance.
 
-The objective is to understand how audio features such as **danceability, energy, tempo (BPM), and valence** influence a song’s streaming performance.
-
-By building a structured data analytics pipeline, the project transforms raw data into meaningful insights and visualizations that explain what drives high-performing songs.
+The project follows a complete data analytics workflow — from raw data to insights — combining Python, SQL, and data visualization to uncover meaningful patterns.
 
 ---
 
@@ -15,6 +13,15 @@ By building a structured data analytics pipeline, the project transforms raw dat
 **What makes a song successful on Spotify?**
 
 This project answers this by analyzing how musical attributes and metadata impact streaming performance.
+
+---
+## Analysis Questions Explored
+
+1. What BPM range produces the most streamed songs?
+2. Do explicit songs perform better than clean songs?
+3. How does valence (happiness) affect streams?
+4. Which genres dominate top-performing songs?
+5. What audio features define high-performing tracks?
 
 ---
 
@@ -30,18 +37,18 @@ This project answers this by analyzing how musical attributes and metadata impac
 
 ## What This Project Demonstrates
 
-- End-to-end **data analytics workflow**
-- Data cleaning and preprocessing using **Pandas**
-- Exploratory Data Analysis (**EDA**)
-- Data visualization using **Matplotlib**
-- Extracting actionable insights from real-world datasets
-- Writing clean, modular, and reproducible Python code
+This project follows a layered analytics workflow:
+- Data Layer → Raw and cleaned datasets
+- Python Layer → Data cleaning and visualization
+- SQL Layer → Analytical queries and aggregations
+- Visualization Layer → Insights communicated through charts
 
 ---
 
 ## Project Structure 
 
 ```
+
 Spotify-Analytics-Insight/
 │
 ├── data/
@@ -59,9 +66,25 @@ Spotify-Analytics-Insight/
 ├── reports/
 │   └── insights.md
 │
+├── sql/
+│   └── analysis.sql
+│
+├── sql_outputs/
+│   ├── bpm_performance.csv
+│   ├── explicit_vs_streams.csv
+│   ├── genre_distribution.csv
+│   └── valence_vs_streams.csv
+│
+├── sql_visuals/
+│   ├── sql_bpm_vs_streams.png
+│   ├── sql_explicit_vs_streams.png
+│   ├── sql_genre_distribution.png
+│   └── sql_valence_vs_streams.png
+│
 ├── src/
 │   ├── data_cleaning.py
-│   └── analysis.py
+│   ├── analysis.py
+│   └── sql_visuals.py
 │
 ├── visuals/
 │   ├── bpm_vs_streams.png
@@ -89,20 +112,43 @@ pip install -r requirements.txt
 
 ## How to Run
 
+1. **Data Cleaning**
 ```
 python src/data_cleaning.py
+```
+2. **Python Analysis & Visualizations**
+```
 python src/analysis.py
 ```
-
-**Outputs:**
+3. **SQL Analysis (SQLite)**
+```
+sqlite3 spotify.db
+.mode csv
+.import data/processed/cleaned_data.csv spotify_data
+.read sql/analysis.sql
+```
+## Outputs
 
 Clean dataset saved in ```data/processed/```
 Visualizations saved in ```visuals/```
 
----
-# Sample Visualizations
+**SQL Analysis Outputs**
 
-## 📊 Sample Visualizations
+SQL queries were used to replicate and validate insights from Python analysis.
+Outputs include:
+- BPM performance analysis
+- Explicit vs non-explicit comparison
+- Genre distribution counts
+- Valence vs streams aggregation
+
+These results are stored in:
+```
+sql_outputs/
+```
+
+---
+
+## Sample Visualizations
 
 ### BPM vs Streams
 ![BPM vs Streams](visuals/bpm_vs_streams.png)
@@ -146,15 +192,6 @@ Includes:
 - Streaming performance metrics
 
 ---
-## Analysis Questions Explored
-
-1. What BPM range produces the most streamed songs?
-2. Do explicit songs perform better than clean songs?
-3. How does valence (happiness) affect streams?
-4. Which genres dominate top-performing songs?
-5. What audio features define high-performing tracks?
-
----
 
 ## Tools & Technologies
 
@@ -163,15 +200,20 @@ Includes:
 - NumPy
 - Matplotlib
 - Jupyter Notebook
+- SQLite
 
 ---
 
 ## Future Improvements
 - Build an interactive dashboard (Power BI / Tableau)
 - Develop a machine learning model for prediction
-- Add SQL-based analysis
 
 ---
 ## Feedback & Contributions
 Feedback, suggestions, and improvements are always welcome.
 If you found this project useful or interesting, feel free to ⭐ the repository and share your thoughts!
+
+---
+## License 
+
+This project is licensed under the MIT License.
