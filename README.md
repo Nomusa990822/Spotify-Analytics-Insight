@@ -39,14 +39,39 @@ This project answers this by analyzing how musical attributes and metadata impac
 
 ---
 
-## Project Structure
+## Project Structure 
 
 ```
 Spotify-Analytics-Insight/
 │
 ├── data/
+│   ├── raw/
+│   │   ├── spotify_alltime_top100_songs.csv
+│   │   ├── spotify_wrapped_2025_top50_artists.csv
+│   │   └── spotify_wrapped_2025_top50_songs.csv
+│   │
+│   └── processed/
+│       └── cleaned_data.csv
 │
-├── raw/ │   │   ├── spotify_alltime_top100_songs.csv │   │   ├── spotify_wrapped_2025_top50_artists.csv │   │   └── spotify_wrapped_2025_top50_songs.csv │   └── processed/ │       └── cleaned_data.csv │ ├── notebooks/ │   └── spotify_analysis.ipynb │ ├── reports/ │   └── insights.md │ ├── src/ │   ├── data_cleaning.py │   └── analysis.py │ ├── visuals/ │   ├── bpm_vs_streams.png │   ├── explicit_vs_streams.png │   ├── genre_distribution.png │   └── valence_vs_streams.png │ ├── README.md ├── requirements.txt └── .gitignore
+├── notebooks/
+│   └── spotify_analysis.ipynb
+│
+├── reports/
+│   └── insights.md
+│
+├── src/
+│   ├── data_cleaning.py
+│   └── analysis.py
+│
+├── visuals/
+│   ├── bpm_vs_streams.png
+│   ├── explicit_vs_streams.png
+│   ├── genre_distribution.png
+│   └── valence_vs_streams.png
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 ```
 ---
 
