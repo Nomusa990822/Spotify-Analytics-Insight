@@ -2,11 +2,11 @@
 
 ## Project Overview
 
-This project explores what drives song popularity on Spotify using real-world data from the Spotify Wrapped 2025 dataset.
+This project analyzes Spotify song data to uncover patterns behind music popularity using the Spotify Wrapped 2025 dataset.
 
-The goal is to understand how audio features such as **danceability, energy, tempo (BPM), and valence** influence a song’s streaming performance.
+The objective is to understand how audio features such as **danceability, energy, tempo (BPM), and valence** influence a song’s streaming performance.
 
-By building a structured data analytics pipeline, this project transforms raw datasets into meaningful insights and visualizations that explain patterns behind high-performing songs.
+By building a structured data analytics pipeline, the project transforms raw data into meaningful insights and visualizations that explain what drives high-performing songs.
 
 ---
 
@@ -80,26 +80,17 @@ Spotify-Analytics-Insight/
 Clone the repository:
 
 ```
-git clone https://github.com/Nomusa990822/Spotify-Analytics-Insight.git
+git clone
+https://github.com/Nomusa990822/Spotify-Analytics-Insight.git
 cd Spotify-Analytics-Insight
-```
-
-Install dependencies:
-```
 pip install -r requirements.txt
 ```
-
 ---
 
 ## How to Run
 
-Step 1: Clean the Data
 ```
 python src/data_cleaning.py
-```
-
-Step 2: Run Analysis
-```
 python src/analysis.py
 ```
 
@@ -139,18 +130,17 @@ _No strong correlation observed — both high and low valence songs can achieve 
 ---
 ## Key Takeaways
 
-- Popularity is influenced by multiple audio features rather than a single dominant factor  
+- Popularity is driven by a combination of features, not a single factor. 
 - Mid-range BPM and higher energy levels tend to perform better  
-- Content type (explicit vs clean) may influence listener engagement  
+- Explicit content may influence listener engagement  
 - Emotional tone (valence) alone is not a strong predictor of success
 
 ---
 ## Dataset
-Dataset sourced from Kaggle:
 
-**Spotify Wrapped 2025 Top Songs & Artists**
+**Spotify Wrapped 2025 Top Songs & Artists (Kaggle)**
 
-This dataset includes:
+Includes:
 - Song metadata
 - Audio features (BPM, energy, danceability, valence)
 - Streaming performance metrics
@@ -173,16 +163,6 @@ This dataset includes:
 - NumPy
 - Matplotlib
 - Jupyter Notebook
-
----
-## Summary
-
-This project demonstrates the ability to:
-- Work with real-world datasets
-- Clean and preprocess messy data
-- Perform exploratory data analysis
-- Communicate insights through visualizations
-- Structure a complete analytics pipeline
 
 ---
 
