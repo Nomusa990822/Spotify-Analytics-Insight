@@ -207,6 +207,7 @@ Includes:
 ## Future Improvements
 - Build an interactive dashboard (Power BI / Tableau)
 - Develop a machine learning model for prediction
+- Expand dataset for deeper analysis
 
 ---
 ## Feedback & Contributions
